@@ -1,0 +1,83 @@
+@import '../styles/variables.scss';
+
+.Wrapper {
+  position: relative;
+
+  &.disabled {
+    pointer-events: none;
+  }
+}
+
+
+.Dropdown {
+  // Layout.
+  display: flex;
+  align-items: center;
+  gap: $spacing-1;
+
+  // Dimensions..
+  height: $form-component-height;
+  padding: 0 $form-padding;
+
+  // Decorations,
+  background-color: $form-primary-bg;
+  color: $form-primary-fg;
+  border-radius: $form-radius;
+
+  // Interactions.
+  cursor: pointer;
+
+  .Handle {
+    font-size: 10px;
+    transform: translateY(15%);
+  }
+
+  .disabled & {
+    background-color: $form-disabled-bg;
+    color: $form-disabled-fg;
+
+    // Disable interactions.
+    cursor: default;
+  }
+}
+
+.Menu {
+  // Position.
+  overflow: hidden;
+  position: absolute;
+  top: calc(100% + $spacing-1);
+  left: 0;
+
+  // Dimensions.
+  height: 0;
+  min-width: 100%;
+
+  // Decorations.
+  border-radius: $form-radius;
+
+  &.open {
+    height: auto;
+  }
+}
+
+.Option {
+  // Layout.
+  display: flex;
+  align-items: center;
+
+  // Dimensions..
+  height: $form-component-height;
+  padding: 0 $form-padding;
+
+  // Color.
+  background-color: $form-primary-bg;
+  color: $form-primary-fg;
+
+  // Interactions.
+  cursor: pointer;
+
+  &:hover {
+    background-color: $form-primary-hover;
+    color: $white;
+  }
+}

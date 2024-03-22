@@ -1,0 +1,26 @@
+@import '../styles/variables.scss';
+
+.Text {
+  line-height: 1.6em;
+}
+
+.xs {
+  font-size: $text-xs;
+  font-weight: $weight-regular;
+}
+
+.sm {
+  font-size: $text-sm;
+  font-weight: $weight-regular;
+}
+
+.md {
+  font-size: $text-md;
+  font-weight: $weight-regular;
+}
+
+.lg {
+  font-size: $text-lg;
+  font-weight: $weight-light;
+  line-height: 1.8em;
+}

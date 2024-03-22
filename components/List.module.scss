@@ -1,0 +1,54 @@
+@import '../styles/variables.scss';
+
+.List {
+  // Decorations.
+  list-style: none; // No dots.
+  border: 1px solid $border-primary;
+  color: $gray-800;
+
+  &.collapsed {
+
+  }
+}
+
+.Header {
+  padding: $spacing-3 $spacing-4;
+  
+  // Layout.
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // Decorations.
+  border-bottom: 1px solid $border-primary;
+  background: $gray-50;
+
+  // Interactions.
+  cursor: pointer;
+
+  .Handle {
+    font-size: 9px;
+  }
+}
+
+.Item {
+  // Layout.
+  display: flex;
+  align-items: center;
+  gap: $spacing-1;
+
+  padding: $spacing-3 $spacing-4;
+  border-bottom: 1px solid $border-primary;
+
+  .Left {
+    justify-self: flex-start;
+  }
+
+  .Content {
+    flex-grow: 1;
+  }
+
+  .Right {
+    justify-self: flex-end;
+  }
+}

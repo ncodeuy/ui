@@ -1,0 +1,68 @@
+@import '../styles/variables.scss';
+
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-1;
+  height: $form-component-height;
+  padding: 0 $form-padding;
+
+  // Border.
+  border-width: 1.5px;
+  border-style: solid;
+  border-radius: $form-radius;
+
+  // Text.
+  font-size: $text-sm;
+  font-weight: $weight-medium;
+
+  // Interactions.
+  cursor: pointer;
+  transition: background-color 120ms ease;
+
+
+  &[disabled] {
+    border-color: $form-disabled-bg;
+    background: $form-disabled-bg;
+    color: $form-disabled-fg;
+
+    // Interactions.
+    cursor: default;
+    pointer-events: none;
+    
+    &.ghost {
+      background: transparent;
+    }
+  }
+}
+
+@mixin button-colors($name, $bg, $fg) {
+  .#{$name}:not([disabled]) {
+    border-color: $bg;
+
+    &.solid {
+      background: $bg;
+      color: $fg;
+    }
+
+    &.ghost {
+      background: transparent;
+      color: $bg;
+    }
+
+    &:hover {
+      background: lighten($bg, 5%);
+    }
+
+    &:active {
+      background: darken($bg, 5%);
+    }
+  }
+}
+
+@include button-colors('primary', $color-primary, $white);
+@include button-colors('warning', $color-warning, $white);
+@include button-colors('danger', $color-danger, $white);
+@include button-colors("black", $black, $white);
+@include button-colors("white", $white, $black);

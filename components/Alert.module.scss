@@ -1,0 +1,23 @@
+@import '../styles/variables.scss';
+
+.Alert {
+  padding: $spacing-1 $spacing-2;
+  border-radius: $radius-sm;
+  color: $white;
+}
+
+.primary {
+  background: $color-primary;
+}
+
+.secondary {
+  background: $color-secondary;
+}
+
+.warning {
+  background: $color-warning;
+}
+
+.danger {
+  background: $color-danger;
+}

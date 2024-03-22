@@ -1,0 +1,46 @@
+@import '../styles/variables.scss';
+
+.Wrapper {
+  display: flex;
+  gap: $spacing-1;
+  align-items: center;
+  cursor: pointer;
+
+  &.disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.Checkbox {
+  // Dimensions.
+  width: 20px;
+  height: 20px;
+
+  // Border.
+  border: 1.5px solid $color-primary;
+  border-radius: $radius-sm;
+
+  // Center checkmark in checkbox.
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.checked {
+    background: $color-primary;
+    color: $white;
+  }
+
+  .disabled & {
+    background: $form-disabled-bg;
+    border-color: $form-disabled-fg;
+    color: $form-disabled-fg;
+  }
+}
+
+.Label {
+  .disabled & {
+    color: $form-disabled-fg;
+  };
+
+}

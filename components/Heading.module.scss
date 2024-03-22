@@ -1,0 +1,31 @@
+@import '../styles/variables.scss';
+
+.Heading {
+  line-height: 1.2em;
+
+}
+
+.xs {
+  font-size: $heading-xs;
+  font-weight: $weight-medium;
+}
+
+.sm {
+  font-size: $heading-sm;
+  font-weight: $weight-medium;
+}
+
+.md {
+  font-size: $heading-md;
+  font-weight: $weight-bold;
+}
+
+.lg {
+  font-size: $heading-lg;
+  font-weight: $weight-regular;
+}
+
+.xl {
+  font-size: $heading-xl;
+  font-weight: $weight-bold;
+}

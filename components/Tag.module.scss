@@ -1,0 +1,21 @@
+@import '../styles/variables.scss';
+
+.Tag {
+  padding: $spacing-1 $spacing-2;
+  border-radius: $radius-sm;
+  color: $white;
+}
+
+@mixin colors($name, $bg, $fg) {
+  .#{$name} {
+    background: $bg;
+    color: $fg;
+  }
+}
+
+@include colors('primary', $color-primary, $white);
+@include colors('info', $color-secondary, $white);
+@include colors('warning', $color-warning, $white);
+@include colors('danger', $color-danger, $white);
+@include colors('black', $black, $white);
+@include colors('white', $white, $black);

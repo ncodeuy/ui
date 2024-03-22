@@ -1,0 +1,14 @@
+@import '../styles/variables.scss';
+
+.Label {
+  // Layout.
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-1;
+}
+
+.Text {
+  color: $gray-600;
+  font-size: $text-sm;
+  font-weight: $weight-medium;
+}
